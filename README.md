@@ -4,10 +4,15 @@
 ## 🚗 Project Overview
 TheDetailingMafia is a comprehensive car wash service platform built using microservices architecture. The system provides on-demand car washing services with AI-powered features, payment processing, and real-time notifications.
 
+## Table Of Contents
+
 - [TheDetailingMafia Backend - Microservices Architecture](#thedetailingmafia-backend---microservices-architecture)
-  - [🚗 Project Overview](#-project-overview)
   - [🏗️ Architecture Overview](#️-architecture-overview)
+
   - [🛠️ Technology Stack](#️-technology-stack)
+  <details>
+  <summary>View subsections</summary>
+
     - [Core Framework](#core-framework)
     - [Microservices Components](#microservices-components)
     - [Security \& Authentication](#security--authentication)
@@ -22,7 +27,13 @@ TheDetailingMafia is a comprehensive car wash service platform built using micro
     - [Development Tools](#development-tools)
     - [Cross-Cutting Concerns](#cross-cutting-concerns)
     - [Advanced Features](#advanced-features)
+
+  </details>
+
   - [📋 Services Details](#-services-details)
+  <details>
+  <summary>View services</summary>
+
     - [1. Discovery Service (Port: 8761)](#1-discovery-service-port-8761)
     - [2. API Gateway Service (Port: 8080)](#2-api-gateway-service-port-8080)
     - [3. User Service (Port: 8081)](#3-user-service-port-8081)
@@ -34,14 +45,29 @@ TheDetailingMafia is a comprehensive car wash service platform built using micro
     - [10. Review Service (Port: 8092)](#10-review-service-port-8092)
     - [11. Media Service (Port: 8089)](#11-media-service-port-8089)
     - [9. AI Service (Port: 8088)](#9-ai-service-port-8088)
+
+  </details>
+
   - [🔧 Configuration](#-configuration)
+  <details>
+  <summary>View configuration sections</summary>
+
     - [Database Configuration](#database-configuration)
     - [Message Queue Configuration](#message-queue-configuration)
     - [Service Discovery Configuration](#service-discovery-configuration)
+
+  </details>
+
   - [🚀 Getting Started](#-getting-started)
+  <details>
+  <summary>View setup steps</summary>
+
     - [Prerequisites](#prerequisites)
     - [Installation \& Setup](#installation--setup)
     - [Environment Variables](#environment-variables)
+
+  </details>
+
   - [📊 API Documentation](#-api-documentation)
   - [🐳 Docker Deployment](#-docker-deployment)
     - [Docker Services Included:](#docker-services-included)
@@ -51,7 +77,6 @@ TheDetailingMafia is a comprehensive car wash service platform built using micro
   - [🤝 Contributing](#-contributing)
   - [📄 License](#-license)
   - [📞 Support](#-support)
-
 
 ## 🏗️ Architecture Overview
 The backend consists of 11 microservices following Domain-Driven Design (DDD) principles with database-per-service architecture:
@@ -625,26 +650,32 @@ MAIL_PASSWORD=your-app-password
 ## 📊 API Documentation
 Each service provides Swagger UI documentation at the endpoint 
 "/swagger-ui" :
+
 <table border="1" cellpadding="8" cellspacing="0">
   <tr>
     <th>Service</th>
     <th>Port</th>
+    <th>Endpoint</th>
   </tr>
   <tr>
     <td>User Service</td>
     <td>8081</td>
+    <td>/swagger-ui</td>
   </tr>
   <tr>
     <td>Car Service</td>
     <td>8083</td>
+    <td>/swagger-ui</td>
   </tr>
   <tr>
     <td>Booking Service</td>
     <td>8084</td>
+    <td>/swagger-ui</td>
   </tr>
   <tr>
     <td>Washer Service</td>
     <td>8085</td>
+    <td>/swagger-ui</td>
   </tr>
   <tr>
     <td>Payment Service</td>
@@ -664,8 +695,10 @@ Each service provides Swagger UI documentation at the endpoint
   <tr>
     <td>Review Service</td>
     <td>8092</td>
+    <td>/swagger-ui</td>
   </tr>
 </table>
+
 
 ## 🐳 Docker Deployment
 The entire microservices architecture can be deployed using Docker Compose:
