@@ -1,3 +1,9 @@
+
+# TheDetailingMafia Backend - Microservices Architecture
+
+## 🚗 Project Overview
+TheDetailingMafia is a comprehensive car wash service platform built using microservices architecture. The system provides on-demand car washing services with AI-powered features, payment processing, and real-time notifications.
+
 - [TheDetailingMafia Backend - Microservices Architecture](#thedetailingmafia-backend---microservices-architecture)
   - [🚗 Project Overview](#-project-overview)
   - [🏗️ Architecture Overview](#️-architecture-overview)
@@ -46,10 +52,6 @@
   - [📄 License](#-license)
   - [📞 Support](#-support)
 
-# TheDetailingMafia Backend - Microservices Architecture
-
-## 🚗 Project Overview
-TheDetailingMafia is a comprehensive car wash service platform built using microservices architecture. The system provides on-demand car washing services with AI-powered features, payment processing, and real-time notifications.
 
 ## 🏗️ Architecture Overview
 The backend consists of 11 microservices following Domain-Driven Design (DDD) principles with database-per-service architecture:
