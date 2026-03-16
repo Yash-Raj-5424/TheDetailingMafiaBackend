@@ -1,3 +1,51 @@
+- [TheDetailingMafia Backend - Microservices Architecture](#thedetailingmafia-backend---microservices-architecture)
+  - [🚗 Project Overview](#-project-overview)
+  - [🏗️ Architecture Overview](#️-architecture-overview)
+  - [🛠️ Technology Stack](#️-technology-stack)
+    - [Core Framework](#core-framework)
+    - [Microservices Components](#microservices-components)
+    - [Security \& Authentication](#security--authentication)
+    - [Database \& Persistence](#database--persistence)
+    - [Message Queue \& Communication](#message-queue--communication)
+    - [AI \& Machine Learning](#ai--machine-learning)
+    - [Payment Processing](#payment-processing)
+    - [Email \& Notifications](#email--notifications)
+    - [Documentation \& API](#documentation--api)
+    - [Monitoring \& Observability](#monitoring--observability)
+    - [Testing](#testing)
+    - [Development Tools](#development-tools)
+    - [Cross-Cutting Concerns](#cross-cutting-concerns)
+    - [Advanced Features](#advanced-features)
+  - [📋 Services Details](#-services-details)
+    - [1. Discovery Service (Port: 8761)](#1-discovery-service-port-8761)
+    - [2. API Gateway Service (Port: 8080)](#2-api-gateway-service-port-8080)
+    - [3. User Service (Port: 8081)](#3-user-service-port-8081)
+    - [4. Booking Service (Port: 8084)](#4-booking-service-port-8084)
+    - [5. Car Service (Port: 8083)](#5-car-service-port-8083)
+    - [6. Payment Service (Port: 8086)](#6-payment-service-port-8086)
+    - [7. Washer Service (Port: 8085)](#7-washer-service-port-8085)
+    - [8. Notification Service (Port: 8087)](#8-notification-service-port-8087)
+    - [10. Review Service (Port: 8092)](#10-review-service-port-8092)
+    - [11. Media Service (Port: 8089)](#11-media-service-port-8089)
+    - [9. AI Service (Port: 8088)](#9-ai-service-port-8088)
+  - [🔧 Configuration](#-configuration)
+    - [Database Configuration](#database-configuration)
+    - [Message Queue Configuration](#message-queue-configuration)
+    - [Service Discovery Configuration](#service-discovery-configuration)
+  - [🚀 Getting Started](#-getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation \& Setup](#installation--setup)
+    - [Environment Variables](#environment-variables)
+  - [📊 API Documentation](#-api-documentation)
+  - [🐳 Docker Deployment](#-docker-deployment)
+    - [Docker Services Included:](#docker-services-included)
+  - [🔍 Monitoring](#-monitoring)
+  - [🧪 Testing](#-testing)
+  - [📝 Version History](#-version-history)
+  - [🤝 Contributing](#-contributing)
+  - [📄 License](#-license)
+  - [📞 Support](#-support)
+
 # TheDetailingMafia Backend - Microservices Architecture
 
 ## 🚗 Project Overview
@@ -45,6 +93,7 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
                                  │                       │             │
                                  └───────────────────────┴─────────────┘
 ```
+[⬆ Back to Table of Contents](#thedetailingmafia-backend---microservices-architecture)
 
 ## 🛠️ Technology Stack
 
@@ -116,6 +165,8 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
 - **Lombok**: Boilerplate code reduction
 - **Jakarta Validation**: Bean validation
 - **Hibernate Validator**: 8.0.1.Final
+- 
+[⬆ Back to Table of Contents](#thedetailingmafia-backend---microservices-architecture)
 
 ### Cross-Cutting Concerns
 - **Aspect-Oriented Programming (AOP)**: Method execution logging and performance monitoring
@@ -139,8 +190,11 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
 - **Connection Pooling**: HikariCP optimization across all services
 - **Cloud Integration**: MongoDB Atlas for scalable document storage
 
-## 📋 Services Details
+[⬆ Back to Table of Contents](#thedetailingmafia-backend---microservices-architecture)
 
+## 📋 Services Details
+<details>
+<summary>Discovery Service </summary>
 ### 1. Discovery Service (Port: 8761)
 - **Purpose**: Service registry and discovery
 - **Technology**: Netflix Eureka Server
@@ -149,6 +203,10 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
   - Service registration and health monitoring
   - Load balancing support
   - Service discovery dashboard
+  
+  </details>
+<details>
+<summary>API Gateway Service </summary>
 
 ### 2. API Gateway Service (Port: 8080)
 - **Purpose**: Single entry point, routing, and load balancing
@@ -159,6 +217,10 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
   - Cross-cutting concerns (CORS, authentication)
   - Reactive programming with WebFlux
   - RabbitMQ integration for messaging
+</details>  
+
+<details>
+<summary>User Service </summary>
 
 ### 3. User Service (Port: 8081)
 - **Purpose**: User management, authentication, and authorization
@@ -179,6 +241,10 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
 - **API Documentation**: Swagger UI with SpringDoc OpenAPI
 - **Testing**: JUnit 5, Mockito 5.14.2, Spring Security Test
 - **Validation**: Jakarta Validation API, Hibernate Validator
+</details>
+
+<details>
+<summary>Booking Service </summary>
 
 ### 4. Booking Service (Port: 8084)
 - **Purpose**: Order and booking management with advanced scheduling and real-time chat
@@ -201,6 +267,10 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
   - **Global Exception Handling**: Custom exceptions
 - **Event-Driven Architecture**: Publishes order events for notifications
 - **Real-time Communication**: WebSocket configuration for instant messaging
+</details>
+
+<details>
+<summary>Car Service </summary>
 
 ### 5. Car Service (Port: 8083)
 - **Purpose**: Vehicle information management
@@ -223,6 +293,11 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
   - Car registration and details management
   - Customer-car relationship mapping (via email references)
   - Car service history tracking
+  
+</details>
+
+<details>
+<summary>Payment Service </summary>
 
 ### 6. Payment Service (Port: 8086)
 - **Purpose**: Payment processing and transaction management
@@ -244,6 +319,10 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
 - **Cross-cutting Concerns**:
   - **AOP Logging**: Transaction monitoring
   - **Custom Logback**: Payment audit logging
+</details>
+
+<details>
+<summary>Washer Service </summary>
 
 ### 7. Washer Service (Port: 8085)
 - **Purpose**: Washer management and service assignment
@@ -263,6 +342,10 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
   - **AOP Logging**: Service method monitoring
   - **Global Exception Handling**: Feign exception management
 - **API Documentation**: Swagger UI
+</details>
+
+<details>
+<summary>Notification Service </summary>
 
 ### 8. Notification Service (Port: 8087)
 - **Purpose**: Email notifications and messaging
@@ -286,6 +369,10 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
   - invoice-generated-email.html
   - order-completed-email.html
   - washer-accepted-email.html
+</details>
+
+<details>
+<summary>Review Service </summary>
 
 ### 10. Review Service (Port: 8092)
 - **Purpose**: Customer feedback and rating management
@@ -310,6 +397,10 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
   - Order validation before review submission
   - Customer feedback collection
   - Rating aggregation and statistics
+</details>
+
+<details>
+<summary>Media Service </summary>
 
 ### 11. Media Service (Port: 8089)
 - **Purpose**: File and media management for images and documents
@@ -342,7 +433,10 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
   - Image optimization and serving
   - Metadata management and cleanup
   - RESTful API for file operations
+</details>
 
+<details>
+<summary>AI Service </summary>
 ### 9. AI Service (Port: 8088)
 - **Purpose**: AI-powered features, document processing, intelligent chatbot, and speech processing
 - **Database**: PostgreSQL with PGVector extension
@@ -387,6 +481,9 @@ The backend consists of 11 microservices following Domain-Driven Design (DDD) pr
   - Multi-service data aggregation
   - Voice-enabled interactions
   - Audio transcription and synthesis
+</details>
+
+[⬆ Back to Table of Contents](#thedetailingmafia-backend---microservices-architecture)
 
 ## 🔧 Configuration
 
@@ -433,6 +530,7 @@ spring.rabbitmq.password=guest
 # Eureka Client
 eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
 ```
+[⬆ Back to Table of Contents](#thedetailingmafia-backend---microservices-architecture)
 
 ## 🚀 Getting Started
 
@@ -520,17 +618,52 @@ VERTEX_AI_LOCATION=your-location
 MAIL_USERNAME=your-email@gmail.com
 MAIL_PASSWORD=your-app-password
 ```
+[⬆ Back to Table of Contents](#thedetailingmafia-backend---microservices-architecture)
 
 ## 📊 API Documentation
-Each service provides Swagger UI documentation:
-- User Service: http://localhost:8081/swagger-ui
-- Car Service: http://localhost:8083/swagger-ui
-- Booking Service: http://localhost:8084/swagger-ui
-- Washer Service: http://localhost:8085/swagger-ui
-- Payment Service: http://localhost:8086/swagger-ui
-- AI Service: http://localhost:8088/swagger-ui
-- Media Service: http://localhost:8089/swagger-ui
-- Review Service: http://localhost:8092/swagger-ui
+Each service provides Swagger UI documentation at the endpoint 
+"/swagger-ui" :
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>Service</th>
+    <th>Port</th>
+  </tr>
+  <tr>
+    <td>User Service</td>
+    <td>8081</td>
+  </tr>
+  <tr>
+    <td>Car Service</td>
+    <td>8083</td>
+  </tr>
+  <tr>
+    <td>Booking Service</td>
+    <td>8084</td>
+  </tr>
+  <tr>
+    <td>Washer Service</td>
+    <td>8085</td>
+  </tr>
+  <tr>
+    <td>Payment Service</td>
+    <td>8086</td>
+    <td>/swagger-ui</td>
+  </tr>
+  <tr>
+    <td>AI Service</td>
+    <td>8088</td>
+    <td>/swagger-ui</td>
+  </tr>
+  <tr>
+    <td>Media Service</td>
+    <td>8089</td>
+    <td>/swagger-ui</td>
+  </tr>
+  <tr>
+    <td>Review Service</td>
+    <td>8092</td>
+  </tr>
+</table>
 
 ## 🐳 Docker Deployment
 The entire microservices architecture can be deployed using Docker Compose:
@@ -576,6 +709,8 @@ mvn test
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
+
+[⬆ Back to Table of Contents](#thedetailingmafia-backend---microservices-architecture)
 
 ## 📄 License
 This project is licensed under the MIT License.
